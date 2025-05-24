@@ -1,0 +1,43 @@
+<div align="center">
+   <div>
+      <h1>Data Binding</h1>
+      <ul>
+        <li>1.Interpolation</li>
+        <li>2.property Binding</li>
+        <li>3,event Binding</li>
+        <li>4.ngModel(two way db)</li>
+      </ul>
+   </div>
+   <div>
+    <h3>:::::::::::;Interpolation:::::::::::::</h3>
+    <p>data  between component to the view</p>
+    <p> i am taking course Name is <b>{{name}}</b></p>
+    <p>my name is : <b>{{firstname+"  "+lastname}}</b></p>
+    <p>Today Number of students joined :<b>{{quantity}}</b></p>
+    <p>Today date is :<b>{{today}}</b></p>
+    <p><b>{{user.name}} is {{user.age}}</b></p>
+   </div>
+   <div>
+    <h3>:::::::::::::::::Property Binding:::::::::::::</h3>
+    <p>Linked in page :<a [href]="linkedin" target="_blank">visit</a></p>
+    <button [disabled]="isButtonDisabled">submit</button>
+    <p [style.font-size]="fontSize">welcome to property Binding</p>
+   </div>
+   <div>
+    <h3>:::::::::::::::::Event Binding:::::::::::::::::::</h3>
+    <button (click)="onClick()">cleck me</button>
+    <div class="evt" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+        Hover me!!!
+    </div>
+   </div>
+   <div>
+    <h3>:::::::::::Two way data binding:::::::::::</h3>
+    Enter yOur Note :<input type="text" [(ngModel)]="val"/>
+   Note is : {{val}}
+   </div>
+   <input type="checkbox" [(ngModel)]="isCheked">
+   <p>Checkbox is {{isCheked ? 'cheked':'uncheked'}}</p>
+
+
+   
+</div>

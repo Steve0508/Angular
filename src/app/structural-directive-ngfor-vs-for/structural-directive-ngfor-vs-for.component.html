@@ -1,0 +1,76 @@
+<div class="row text-center">
+    <div class="col-4">
+        <div>
+            <select>
+                <!-- <option [value]="emp.empid" *ngFor="let emp of employees">
+    {{emp.empname}}-{{emp.empsal}}-{{emp.empadd}}
+                </option> -->
+                @for(emp of employees;track emp;)
+                {
+                    <option [value]="emp.empid" >
+    {{emp.empname}}-{{emp.empsal}}-{{emp.empadd}}
+                </option>
+                }
+            </select>
+        </div>
+    </div>
+   
+    <div class="col-6">
+        <table class="table table-bordered">
+           <thead>
+              <th>Empid</th>
+              <th>Empname</th>
+              <th>Empsal</th>
+              <th>EmpAdd</th>
+           </thead>
+           <tbody>
+             <!-- <tr *ngFor="let emp of employees">
+                <td>{{emp.empid}}</td>
+                <td>{{emp.empname}}</td>
+                <td>{{emp.empsal}}</td>
+                <td>{{emp.empadd}}</td>
+             </tr> -->
+             @for(emp of employees;track emp;)
+             {
+                <tr >
+                <td>{{emp.empid}}</td>
+                <td>{{emp.empname}}</td>
+                <td>{{emp.empsal}}</td>
+                <td>{{emp.empadd}}</td>
+             </tr>
+             }
+           </tbody>
+        </table>
+
+
+    </div>
+     
+    <div class="col-2">
+        <ul>
+            <!-- <li *ngFor="let company of companyList">
+                {{company}}
+            </li> -->
+
+
+            @for(company of companyList;track company;)
+            {
+               <li>
+                {{company}}
+            </li>  
+            }
+        </ul>
+    </div>
+    <div class="col-8">
+        <!-- <button class="btn btn-primary m-1" *ngFor="let company of companyList">
+            {{company}}
+        </button> -->
+
+
+        @for(company of companyList;track company)
+        {
+            <button class="btn btn-primary m-1" >
+            {{company}}
+        </button>
+        }
+    </div>
+</div>

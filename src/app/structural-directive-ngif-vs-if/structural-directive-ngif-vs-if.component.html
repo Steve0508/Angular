@@ -1,0 +1,43 @@
+<div class="row text-center">
+    <h2>Structural directive ngIf vs If</h2>
+</div>
+<div class="row text-center">
+    <div class="col-4">
+      <div>
+        <input type="checkbox" (click)="clicked()"/>Terms and Conditions
+      </div>
+      <!-- <div *ngIf="isCheked">
+        <div class="btn btn-success">submit</div>
+      </div> -->
+      @if(isCheked){
+        <div class="m-1">
+        <div class="btn btn-success">submit</div>
+      </div> 
+      }
+    </div>
+
+
+    <div class="col-4">
+      <div *ngIf="isInputBox">
+        <input type="text" value="Edubridge"/>
+      </div>
+      <div class="m-2">
+        <button class="btn btn-success m-2" (click)="showField()">show</button>
+          <button class="btn btn-danger" (click)="hideField()">Hide</button>
+      </div>
+    </div>
+
+
+    <div class="col-4">
+          <div>
+            <input type="text" class="m-1" [(ngModel)]="input1"/>
+             <input type="text" [(ngModel)]="input2" />
+          </div>
+          <div *ngIf="input1===input2">
+            <h4>both values are equal</h4>
+          </div>
+          <div *ngIf="input1!==input2">
+            <h4>both values are not equal</h4>
+          </div>
+    </div>
+</div>
