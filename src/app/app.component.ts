@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { StructuralDirectiveNgifVsIfComponent } from './structural-directive-ngif-vs-if/structural-directive-ngif-vs-if.component';
@@ -13,6 +13,8 @@ import { LinkedSignalsComponent } from './linked-signals/linked-signals.componen
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet,
+    RouterLink,
+    RouterLinkActive
     //UsersComponent,
     // DataBindingComponent,
     //StructuralDirectiveNgifVsIfComponent,
@@ -21,7 +23,7 @@ import { LinkedSignalsComponent } from './linked-signals/linked-signals.componen
   //AttributeDirectiveComponent
 //AttributeDirectiveNgstyleComponent
 //SignalsComponent
-LinkedSignalsComponent
+//LinkedSignalsComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
